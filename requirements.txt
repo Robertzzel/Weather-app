@@ -1,0 +1,6 @@
+Flask
+Flask-SQLALCHEMY
+requests
+datetime
+json
+uwsgi
