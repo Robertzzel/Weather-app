@@ -34,7 +34,6 @@ def index():
             date={
             'Oras' : fisier['city']['name'],
             'Temperatura':round(fisier['list'][0]['main']['temp']-273.15,2),
-            'Temp. Resimtita' : round(fisier['list'][0]['main']['feels_like']-273.15,2),
             'Temperatura minima' : round(fisier['list'][0]['main']['temp_min']-273.15,2),
             'Temperatura maxima' : round(fisier['list'][0]['main']['temp_max']-273.15,2),
             'Rasarit' : rasarit,
