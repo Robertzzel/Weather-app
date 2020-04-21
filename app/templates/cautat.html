@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Vremea in {{date['Oras']}}</title>
+
+{% endblock %}
+
+
+{% block body %}
+<h1>Vremea actuala:</h1>
+<table class='table'>
+  {%for tab in date %}
+  <tr>
+    <td>{{tab}}</td>
+    <td>{{date[tab]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

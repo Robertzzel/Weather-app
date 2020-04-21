@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Oras Gasit</title>
+{% endblock %}
+
+
+{% block body %}
+{% if date|length == 1 %}
+  <h1>Codul este: {{date[0]['id']}} .</h1>
+{% else %}
+<table class='table'>
+  <h2>Nu am gasit orasul ,totusi uite o lista cu orase la care te puteai referi:</h2>
+  {% for tab in date %}
+  <tr>
+    <td>{{tab['nume']}}</td>
+    <td>{{tab['id']}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+<a href="/coduri">Cauta alt oras</a>
+{% endblock %}

@@ -1,0 +1,29 @@
+{%extends 'base.html' %}
+
+{%block head %}
+<title>Weather</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Hello!</h1>
+<h3>Cauta vremea din orice oras,introdu codul orasului:</h3>
+<form action="/" method="post">
+  Cod: <input type="text" name="cod">
+  <button type="submit" name="button">Afla vremea!</button>
+</form>
+
+<p>Nu iti stii codul orasului? Gaseste aici codul : <a href="/coduri">Coduri</a></p>
+
+<h4>Tabel cu cateva orase:</h4>
+<table class='table'>
+  {%for oras in rec %}
+  <tr>
+    <td>{{oras}}</td>
+    <td>{{rec[oras]}}</td>
+  </tr>
+  {%endfor %}
+</table>
+
+{% endblock %}

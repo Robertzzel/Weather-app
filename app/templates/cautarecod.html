@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Coduri</title>
+{% endblock %}
+
+
+
+
+{% block body %}
+
+<form action="/coduri" method="post">
+  Oras: <input type="text" name="oras">
+  <button class='mt-4' type="submit" name="button">Cauta codul</button>
+</form>
+
+<a href="/">Inapoi la pagina de start</a>
+
+{% endblock %}
