@@ -13,7 +13,8 @@ def index():
         'Iasi' : 675810,
         "Bucuresti" : 683506,
         'Atena' : 264371,
-        'Londra': 2643741
+        'Londra': 2643741,
+        'Botosani' : 684038
         }
         return render_template('home.html',rec=recomandari)
     else:
