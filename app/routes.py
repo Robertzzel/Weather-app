@@ -26,9 +26,9 @@ def index():
 
             fisier=r.json()
 
-            rasarit= dt.datetime.fromtimestamp(fisier['city']['sunrise'])
+            rasarit= dt.datetime.fromtimestamp(fisier['city']['sunrise']) +10800;
             rasarit=rasarit.strftime('%H:%M:%S')
-            apus= dt.datetime.fromtimestamp(fisier['city']['sunset'])
+            apus= dt.datetime.fromtimestamp(fisier['city']['sunset']) +10800;
             apus=apus.strftime('%H:%M:%S')
 
             date={
