@@ -1,5 +1,6 @@
 import requests as rq
 import datetime as dt
+
 import json
 from flask import render_template,redirect,request
 from app import app
@@ -26,9 +27,9 @@ def index():
 
             fisier=r.json()
 
-            rasarit= dt.datetime.fromtimestamp(fisier['city']['sunrise']) +10800;
+            rasarit= dt.datetime.fromtimestamp(fisier['city']['sunrise'])+dt.timedelta(hours=3);
             rasarit=rasarit.strftime('%H:%M:%S')
-            apus= dt.datetime.fromtimestamp(fisier['city']['sunset']) +10800;
+            apus= dt.datetime.fromtimestamp(fisier['city']['sunset'])+dt.timedelta(hours=3);
             apus=apus.strftime('%H:%M:%S')
 
             date={
